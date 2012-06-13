@@ -1,19 +1,19 @@
 package regelmotor.diagnose;
 
 public enum VurderingMedInvaliditet {
-   R13_ALLERGISKE_LIDELSER(false), 
-   R13_MATVAREINTOLERANSE_ALLERGI(false),
-   R13_LEGEMIDDELINTOLERANSE(true),
-   R9(true),
-   R11(true);
+   R13_ALLERGISKE_LIDELSER(true), 
+   R13_MATVAREINTOLERANSE_ALLERGI(true),
+   R13_LEGEMIDDELINTOLERANSE(false),
+   R9(false),
+   R11(false);
    
-   private final boolean kanAutomatiseres;
+   private final boolean kreverSaksbehandling;
 
-   private VurderingMedInvaliditet(boolean kanAutomatiseres) {
-      this.kanAutomatiseres = kanAutomatiseres;
+   private VurderingMedInvaliditet(boolean kreverSaksbehandling) {
+      this.kreverSaksbehandling = kreverSaksbehandling;
    }
    
-   boolean kanAutomatiseres() {
-      return kanAutomatiseres;
+   boolean kreverSaksbehandling() {
+      return kreverSaksbehandling;
    }
 }

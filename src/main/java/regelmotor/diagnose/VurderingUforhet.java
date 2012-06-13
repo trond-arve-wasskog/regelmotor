@@ -1,18 +1,18 @@
 package regelmotor.diagnose;
 
 public enum VurderingUforhet {
-   ORDINARE_VILKAAR(true),
-   RESERVASJON_KUN_I_ALVORLIGE_TILFELLER(false),
-   R9_SOM_REGEL(false);
+   ORDINARE_VILKAAR(false),
+   RESERVASJON_KUN_I_ALVORLIGE_TILFELLER(true),
+   R9_SOM_REGEL(true);
    
-   private final boolean kanAutomatiseres;
+   private final boolean kreverSaksbehandling;
 
-   private VurderingUforhet(boolean kanAutomatiseres) {
-      this.kanAutomatiseres = kanAutomatiseres;
+   private VurderingUforhet(boolean kreverSaksbehandling) {
+      this.kreverSaksbehandling = kreverSaksbehandling;
    }
    
-   boolean kanAutomatiseres() {
-      return kanAutomatiseres;
+   boolean kreverSaksbehandling() {
+      return kreverSaksbehandling;
    }
    
 }
