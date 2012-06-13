@@ -20,13 +20,8 @@ public class Soknad {
          this.soknad = new Soknad();
       }
 
-      public SoknadBuilder med(Diagnose[] diagnoser) {
+      public SoknadBuilder med(Diagnose... diagnoser) {
          soknad.diagnoser.addAll(Arrays.asList(diagnoser));
-         return this;
-      }
-      
-      public SoknadBuilder med(Diagnose diagnose) {
-         soknad.diagnoser.add(diagnose);
          return this;
       }
       
