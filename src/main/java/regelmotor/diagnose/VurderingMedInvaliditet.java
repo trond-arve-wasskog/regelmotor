@@ -3,7 +3,9 @@ package regelmotor.diagnose;
 public enum VurderingMedInvaliditet {
    R13_ALLERGISKE_LIDELSER(false), 
    R13_MATVAREINTOLERANSE_ALLERGI(false),
-   R13_LEGEMIDDELINTOLERANSE(true);
+   R13_LEGEMIDDELINTOLERANSE(true),
+   R9(true),
+   R11(true);
    
    private final boolean kanAutomatiseres;
 
