@@ -13,7 +13,7 @@ public enum VurderingMedInvaliditet {
       this.kreverSaksbehandling = kreverSaksbehandling;
    }
    
-   boolean kreverSaksbehandling() {
+   public boolean kreverSaksbehandling() {
       return kreverSaksbehandling;
    }
 }
