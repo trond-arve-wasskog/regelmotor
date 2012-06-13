@@ -12,6 +12,7 @@ public class Barneforsikring implements Vurdering {
 	public Barneforsikring() {
 		barneforsikringsregler.add(new AllergiskeLidelser());
 		barneforsikringsregler.add(new AstmaLuftsveiLidelser());
+		barneforsikringsregler.add(new E66EkstremOvervekt());
 	}
 	
 	public Set<VurderingMedInvaliditet> vurderingMedInvaliditet(Soknad soknad) {
