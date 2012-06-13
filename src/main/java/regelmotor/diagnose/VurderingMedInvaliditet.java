@@ -5,7 +5,9 @@ public enum VurderingMedInvaliditet {
    R13_MATVAREINTOLERANSE_ALLERGI(true),
    R13_LEGEMIDDELINTOLERANSE(false),
    R9(false),
-   R11(false);
+   R11(false), 
+   AVSLAG(true), 
+   RESERVASJON(true);
    
    private final boolean kreverSaksbehandling;
 
