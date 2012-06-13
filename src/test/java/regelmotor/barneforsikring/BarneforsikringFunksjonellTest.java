@@ -20,7 +20,7 @@ public class BarneforsikringFunksjonellTest {
 	@Source("BarneforsikringFunksjonellTest.xls")
 	public void testBarneforsikring(Diagnose diagnose, VurderingMedInvaliditet vurderingMedInvaliditet, boolean kreverSaksbehandling) {
 		Barneforsikring barneforsikring = new Barneforsikring();
-		Set<VurderingMedInvaliditet> vurdering = barneforsikring.vurderingMedInvaliditet(sokerMed(diagnose));
+		Set<VurderingMedInvaliditet> vurdering = barneforsikring.vurderingMedInvaliditet(soknadMed(diagnose));
 		assertThat(vurdering, hasItem(vurderingMedInvaliditet));
 		assertEquals(kreverSaksbehandling, vurdering.iterator().next().kreverSaksbehandling());
 	}

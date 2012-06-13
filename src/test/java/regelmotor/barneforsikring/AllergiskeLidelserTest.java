@@ -19,17 +19,17 @@ public class AllergiskeLidelserTest {
    
    @Test
    public void testAtAllergierInklPollenallergiT78VurderingMedInvaliditetErR13AllergiskeLidelser() {
-      assertThat(allergiskeLidelser.vurderingMedInvaliditet(sokerMed(T78)), hasItem(R13_ALLERGISKE_LIDELSER));
+      assertThat(allergiskeLidelser.vurderingMedInvaliditet(soknadMed(T78)), hasItem(R13_ALLERGISKE_LIDELSER));
    }
 
    @Test
    public void testAtMatvareintoleranseK92VurderingMedInvaliditetErR13MatvareintoleranseAllergi() {
-      assertThat(allergiskeLidelser.vurderingMedInvaliditet(sokerMed(K92)), hasItem(R13_MATVAREINTOLERANSE_ALLERGI));
+      assertThat(allergiskeLidelser.vurderingMedInvaliditet(soknadMed(K92)), hasItem(R13_MATVAREINTOLERANSE_ALLERGI));
    }
    
    @Test
    public void testAtToDiagnoserGirToVurderinger() {
-      assertThat(allergiskeLidelser.vurderingMedInvaliditet(sokerMed(T78, K92)), hasItems(R13_ALLERGISKE_LIDELSER, R13_MATVAREINTOLERANSE_ALLERGI));
+      assertThat(allergiskeLidelser.vurderingMedInvaliditet(soknadMed(T78, K92)), hasItems(R13_ALLERGISKE_LIDELSER, R13_MATVAREINTOLERANSE_ALLERGI));
    }
    
 }

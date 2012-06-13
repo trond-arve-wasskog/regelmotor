@@ -2,9 +2,9 @@ package regelmotor.core;
 
 import java.util.*;
 
+import regelmotor.barneforsikring.*;
 import regelmotor.diagnose.*;
-import regelmotor.soker.*;
 
 public interface Vurdering {
-	Set<VurderingMedInvaliditet> vurderingMedInvaliditet(Soker soker);
+	Set<VurderingMedInvaliditet> vurderingMedInvaliditet(Soknad soknad);
 }

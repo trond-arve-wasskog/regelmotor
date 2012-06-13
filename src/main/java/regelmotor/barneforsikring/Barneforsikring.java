@@ -4,7 +4,6 @@ import java.util.*;
 
 import regelmotor.core.*;
 import regelmotor.diagnose.*;
-import regelmotor.soker.*;
 
 public class Barneforsikring implements Vurdering {
 
@@ -15,10 +14,10 @@ public class Barneforsikring implements Vurdering {
 		barneforsikringsregler.add(new AstmaLuftsveiLidelser());
 	}
 	
-	public Set<VurderingMedInvaliditet> vurderingMedInvaliditet(Soker soker) {
+	public Set<VurderingMedInvaliditet> vurderingMedInvaliditet(Soknad soknad) {
 		Set<VurderingMedInvaliditet> vurderingMedInvaliditet = new HashSet<VurderingMedInvaliditet>();
 		for (Vurdering vurdering : barneforsikringsregler) {
-			vurderingMedInvaliditet.addAll(vurdering.vurderingMedInvaliditet(soker));
+			vurderingMedInvaliditet.addAll(vurdering.vurderingMedInvaliditet(soknad));
 		}
 		
 		return Collections.unmodifiableSet(vurderingMedInvaliditet);
